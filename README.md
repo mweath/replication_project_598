@@ -2,7 +2,7 @@
 
 ## Paper Title: 
 
-## Purporse:
+## Purpose:
 
 Contributors: Maggie Weatherly, Juan Solorio, Anmol Srivastava, Andy De La Fuente
 
