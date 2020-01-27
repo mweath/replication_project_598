@@ -9,13 +9,13 @@ The goal of this repo is to complete a professional, publication-worthy replicat
 
 Maggie Weatherly [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3682-8216)
 
-Juan Solorio
+Juan Solorio [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3833-9459)
 
-Anmol Srivastava
+Anmol Srivastava [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-9553-3904)
 
 Andy De La Fuente
 
-Matt Rhodes
+Matt Rhodes [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-4400-7111)
 
 ## Content:
 
