@@ -57,6 +57,9 @@ Rubin VL, Chen Y, Conroy NJ. Deception detection for news: three types of fakes.
 
  plyr        * 1.8.4   2016-06-08 [1] CRAN (R 3.6.1)
  
+ keras       * 2.2.5.0 2019-10-08 [1] CRAN (R 3.6.2)
+ 
+ magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.2)
 
 ## Group Information:
 
