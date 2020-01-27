@@ -50,9 +50,13 @@ Rubin VL, Chen Y, Conroy NJ. Deception detection for news: three types of fakes.
 
 ## Dependencies:
  tensorflow    2.0.0   2019-10-02 [1] CRAN (R 3.6.2)
+
  mlr         * 2.17.0  2020-01-10 [1] CRAN (R 3.6.2)
+
  NLP         * 0.2-0   2018-10-18 [1] CRAN (R 3.6.0)
+
  plyr        * 1.8.4   2016-06-08 [1] CRAN (R 3.6.1)
+ 
 
 ## Group Information:
 
