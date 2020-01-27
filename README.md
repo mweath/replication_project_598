@@ -25,27 +25,30 @@ Citation: J. Amador, A. Oehmichen, M. Molina-Solana (2017). “Characterizing Po
 
 ## Data:
 
+The data was obtained from the original GitHub repository for the project :https://github.com/alumag/ADAFake/tree/master/source .
+The data contains the features:
+is_fake_news	
+fake_news_category	
+tweet_id	created_at	
+retweet_count	
+text	
+user_screen_name	
+user_verified	
+user_friends_count	
+user_followers_count	
+user_favourites_count	
+tweet_source	
+geo_coordinates	
+num_hashtags	
+num_mentions	
+num_urls	
+num_media
+
+According to the original research team, "data was collected using search terms related to the presidential election held in the United States on November 8th 2016. Particularly, we queried Twitter’s streaming API, more precisely the filter endpoint of the streaming API, using the following hashtags and user handles: #MyVote2016, #ElectionDay, #electionnight, @realDonaldTrump and @HillaryClinton. The data collection ran for just one day (Nov 8th 2016)".
+An expert then cureated the tweets to classify them as Fake or not Fake in accordance to categorization provided by 
+Rubin VL, Chen Y, Conroy NJ. Deception detection for news: three types of fakes. In Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community. 2015, 83:1–83:4.
+
 ## Dependencies:
-
-- Session info ----------------------------------------------------------------------------
- setting  value                       
- version  R version 3.6.2 (2019-12-12)
- os       Windows 10 x64              
- system   x86_64, mingw32             
- ui       RStudio                     
- language (EN)                        
- collate  English_United States.1252  
- ctype    English_United States.1252  
- tz       America/Los_Angeles         
- date     2020-01-26                  
-
-- Packages --------------------------------------------------------------------------------
- package     * version date       lib source        
- 
- keras       * 2.2.5.0 2019-10-08 [1] CRAN (R 3.6.2)
- magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.2)
- tensorflow    2.0.0   2019-10-02 [1] CRAN (R 3.6.2)
- 
 
 ## Group Information:
 
