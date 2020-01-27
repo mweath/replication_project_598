@@ -45,7 +45,6 @@ Citation: J. Amador, A. Oehmichen, M. Molina-Solana (2017). “Characterizing Po
  keras       * 2.2.5.0 2019-10-08 [1] CRAN (R 3.6.2)
  magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.2)
  tensorflow    2.0.0   2019-10-02 [1] CRAN (R 3.6.2)
- testthat      2.3.1   2019-12-01 [1] CRAN (R 3.6.2)
  
 
 ## Group Information:
