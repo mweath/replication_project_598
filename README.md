@@ -7,7 +7,7 @@ The goal of this repo is to complete a professional, publication-worthy replicat
 
 ## Contributors:
 
-Maggie Weatherly
+Maggie Weatherly [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3682-8216)
 
 Juan Solorio
 
