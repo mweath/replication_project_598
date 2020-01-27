@@ -13,7 +13,7 @@ Juan Solorio [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)]
 
 Anmol Srivastava [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-9553-3904)
 
-Andy De La Fuente
+Andy De La Fuente [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-4148-8690)
 
 Matt Rhodes [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-4400-7111)
 
