@@ -23,6 +23,27 @@ Matt Rhodes [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](
 
 ## Dependencies:
 
+- Session info ----------------------------------------------------------------------------
+ setting  value                       
+ version  R version 3.6.2 (2019-12-12)
+ os       Windows 10 x64              
+ system   x86_64, mingw32             
+ ui       RStudio                     
+ language (EN)                        
+ collate  English_United States.1252  
+ ctype    English_United States.1252  
+ tz       America/Los_Angeles         
+ date     2020-01-26                  
+
+- Packages --------------------------------------------------------------------------------
+ package     * version date       lib source        
+ 
+ keras       * 2.2.5.0 2019-10-08 [1] CRAN (R 3.6.2)
+ magrittr      1.5     2014-11-22 [1] CRAN (R 3.6.2)
+ tensorflow    2.0.0   2019-10-02 [1] CRAN (R 3.6.2)
+ testthat      2.3.1   2019-12-01 [1] CRAN (R 3.6.2)
+ 
+
 ## Group Information:
 
 Campus Wire Group URL: https://campuswire.com/c/G54B6BAAE/rooms/CD4A0F78D
