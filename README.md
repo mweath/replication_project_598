@@ -49,6 +49,31 @@ An expert then cureated the tweets to classify them as Fake or not Fake in accor
 Rubin VL, Chen Y, Conroy NJ. Deception detection for news: three types of fakes. In Proceedings of the 78th ASIS&T Annual Meeting: Information Science with Impact: Research in and for the Community. 2015, 83:1–83:4.
 
 ## Dependencies:
+
+- Session info ----------------------------------------------------------------------------
+
+ setting  value                       
+ 
+ version  R version 3.6.2 (2019-12-12)
+ 
+ os       Windows 10 x64
+ 
+ system   x86_64, mingw32 
+ 
+ ui       RStudio
+ 
+ language (EN)   
+ 
+ collate  English_United States.1252 
+ 
+ ctype    English_United States.1252 
+ 
+ tz       America/Los_Angeles 
+ 
+ date     2020-01-26                  
+
+- Packages --------------------------------------------------------------------------------
+
  tensorflow    2.0.0   2019-10-02 [1] CRAN (R 3.6.2)
 
  mlr         * 2.17.0  2020-01-10 [1] CRAN (R 3.6.2)
