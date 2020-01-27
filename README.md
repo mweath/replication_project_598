@@ -2,7 +2,7 @@
 
 The goal of this repo is to complete a professional, publication-worthy replication of a notable scientific paper. This is part of UW's Data Science Master's Program, DATA 598 - Reproducibility for Data Science
 
-## Title:
+## Title: Political Fake News Characterization Replication Using Twitter
  
 
 ## Contributors:
