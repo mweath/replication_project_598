@@ -1,0 +1,12 @@
+---
+title: "Replication Project Notes"
+author: "Andres De La Fuente"
+date: "2/9/2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Notes and Additional Code
