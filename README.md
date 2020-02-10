@@ -17,6 +17,10 @@ Andy De La Fuente [![](https://orcid.org/sites/default/files/images/orcid_16x16.
 
 Matt Rhodes [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-4400-7111)
 
+## Contributing:
+
+We welcome contributions from everyone. Before you get started, please see our contributor guidelines. Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by its terms.
+
 ## Content: 
 
 The goal of this repository is to reproduce the results found in the paper "Characterizing Political Fake News in Twitter by its Meta-Data". The main claim of the paper is that their are significant difference among multiple aspects of the tweets that contained Fake News vs Authentic News. Some of the main differences found were the distribution of followers, the number of URLs on tweets, and the verification of the users. This claim is important to replicate because fake news is everywhere and it is not going away anytime soon. We need to understand if the tweets made are becoming more advanced (harder to dicern) or if there is still a good enough amount of dissimilarity to identify a post that is fake news.                                                                           
