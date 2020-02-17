@@ -1,0 +1,19 @@
+---
+title: "Working Replication Notebook - Anmol"
+output: html_notebook
+---
+
+```{r}
+tweets <- read_excel("replication_project_598/Data/electionday_tweets_clean.xlsx")
+```
+
+```{r}
+library(ggplot2)
+
+ggplot(tweets, aes(factor(num_urls)), fill=factor(is_fake_news)) + geom_bar(position="dodge") +
+scale_y_continuous(labels=scales::percent) + 
+facet_grid(~is_fake_news)
+
+
+```
+
