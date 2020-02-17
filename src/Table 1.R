@@ -11,7 +11,7 @@ for (col in columns){
   paste(col)
   sample1 = true_news[,col]
   sample2 = fake_news[,col]
-  dup <- ks.test(sample2, sample1, , alternative="l")
+  dup <- ks.test(sample2, sample1, , alternative="g")
   differences <- c(differences, dup$statistic)
   p_vals <- c(p_vals, dup$p.value)
 }
