@@ -1,0 +1,16 @@
+---
+title: "Fig. 12"
+output: html_notebook
+---
+
+```{r}
+library(ggplot2)
+
+# label-style not exactly matching 
+tweets <- read_excel("../Data/electionday_tweets_clean.xlsx")
+tweets$is_fake_news <- factor(tweets$is_fake_news, levels = c("TRUE", "FALSE"))
+
+# just need to remove the excess empty bins
+ggplot(tweets, aes(x=num_urls, group=is_fake_news, fill=is_fake_news)) + geom_histogram(aes(y=..density..), position="dodge")
+```
+
