@@ -1,0 +1,32 @@
+---
+title: "Figure 7"
+author: "Juan Solorio"
+date: "2/23/2020"
+output: html_document
+---
+
+```{r, load-&-libraries, echo=FALSE, message=FALSE}
+library(tidyverse)
+library(httr)
+
+tweets_data <- read.csv("../Data/electionday_tweets_clean.csv")
+
+tweets <- tweets_data[,]
+
+tweets$FakeNewsLabel <- ifelse(tweets$is_fake_news == TRUE, 'fake news', 'other')
+
+```
+
+```{r, figure7, fig.cap = 'Figure 7: Density distributions of the number of followers that the accounts generating viral tweets (within our sample) have. Accounts producing fake news have a narrower window of followers', warning=FALSE}
+
+ggplot(data = tweets, aes(user_followers_count, fill = FakeNewsLabel ,
+  color= FakeNewsLabel)) +
+  scale_x_continuous(name = 'number of followers (log10)',trans = 'log10',
+                     breaks = c(1e+02, 1e+04, 1e+06, 1e+08),
+                     labels = c('2','4','6','8')) +
+  geom_density(alpha = .5) +
+  ggtitle(label = 'Distribution of followers') + 
+  theme(plot.title = element_text(size = 9, face = 'bold'),
+        legend.title = element_blank()) 
+```
+
