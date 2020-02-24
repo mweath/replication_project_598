@@ -7,16 +7,13 @@ output: pdf_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(tidyverse)
-library(ggplot2)
-library(dplyr)
-data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
-df <- data %>% select(is_fake_news, num_hashtags) 
 ```
 
 ## Figure 4
 
 ```{r, echo=T}
+df <- data %>% select(is_fake_news, num_hashtags) 
+
 ggplot(df, aes(num_hashtags)) +
   geom_histogram(aes(y=c(..count..[..group..==1]/sum(..count..[..group..==1]),
                          ..count..[..group..==2]/sum(..count..[..group..==2]))*100,
