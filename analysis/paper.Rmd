@@ -23,9 +23,27 @@ library(dplyr)
 data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```
 
+```{r}
+figure_generator <- function(file_name){
+  knitr::include_graphics(paste("../Data/", file_name, sep="")))
+}
+```
+
+## Original Table 1
+```{r}
+figure_generator("Table1.PNG")
+```
+
+
 ## Table 1
 
 ```{r child-table1, child='Table 1.Rmd'}
+```
+
+## Original Figure 4
+
+```{r}
+figure_generator("Figure4.PNG")
 ```
 
 ## Figure 4
@@ -33,14 +51,39 @@ data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```{r child-figure4, child='figure4.Rmd'}
 ```
 
+# Original Figure 6 
+
+```{r}
+figure_generator("Figure6.PNG")
+```
+
 ## Figure 6
 
-```{r child-figure6, child='Figures_6_7_9.rmd'}
+```{r child-figure6, child='Figure6.rmd'}
+```
+
+## Original Figure 7
+```{r}
+figure_generator("Figure7.PNG")
 ```
 
 ## Figure 7
 
 ```{r child-figure7, child='Figure7.Rmd'}
+```
+
+## Original Figure 9
+```{r}
+figure_generator("Figure9.PNG")
+```
+
+## Figure 9
+```{r child-figure9, child='Figure9.rmd'}
+```
+
+## Original Figure 12
+```{r}
+figure_generator("Figure12.PNG")
 ```
 
 ## Figure 12
