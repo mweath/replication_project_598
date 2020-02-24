@@ -5,10 +5,8 @@ output: pdf_document
 
 
 ```{r, echo=F}
-# label-style not exactly matching 
 result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 
-# just need to remove the excess empty bins
-ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge")
+ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + labs(y="Density", fill="Is_Fake_news") + ggtitle("Distribution of Number of URLs Per Tweet")
 ```
 
