@@ -15,15 +15,4 @@ ggplot(data) +
   geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
 ```
-```{r}
-ggplot(data) +
-  ggtitle("Distribution of Followers") +
-  geom_density(aes(x=log(user_followers_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
-```
-```{r}
-ggplot(data) +
-  ggtitle("Distribution of Friends to Followers Ratio") +
-  geom_density(aes(x=(log(user_friends_count)/log(user_followers_count)), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
-
-```

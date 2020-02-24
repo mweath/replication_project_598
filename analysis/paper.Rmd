@@ -35,12 +35,16 @@ data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 
 ## Figure 6
 
-```{r child-figure6, child='Figures_6_7_9.rmd'}
+```{r child-figure6, child='Figure6.rmd'}
 ```
 
 ## Figure 7
 
 ```{r child-figure7, child='Figure7.Rmd'}
+```
+
+## Figure 9
+```{r child-figure9, child='Figure9.rmd'}
 ```
 
 ## Figure 12
