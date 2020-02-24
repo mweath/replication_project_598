@@ -14,7 +14,8 @@ output:
 link-citations: yes
 ---
 
-```{r, libraries, echo=FALSE, message=FALSE}
+```{r, libraries, echo=FALSE, message=FALSE, warning=FALSE}
+knitr::opts_chunk$set(warning = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(ggplot2)
