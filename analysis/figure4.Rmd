@@ -19,9 +19,9 @@ ggplot(df, aes(num_hashtags)) +
                      color = is_fake_news, fill=is_fake_news),
                  position="dodge", bins=10, alpha = 0.4) +
   ylab("Percentage") + xlab("Number of Hashtags") +
-  scale_color_manual(values = c("#df6066", "#80bab4")) +
-  scale_fill_manual(values = c("#df6066", "#80bab4")) +
+  scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) +
+  scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) +
   scale_x_continuous(breaks = seq(0,10,1), labels = seq(0,10,1)) +
-  theme(panel.grid.minor = element_blank())
+  theme(panel.grid.minor = element_blank()) 
 ```
 
