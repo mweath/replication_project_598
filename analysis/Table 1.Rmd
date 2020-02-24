@@ -13,14 +13,46 @@ columns = c(10, 9, 16, 11, 15, 17, 5, 14)
 differences = c()
 p_vals = c()
 for (col in columns){
-  paste(col)
-  sample1 = true_news[,col]
-  sample2 = fake_news[,col]
-  dup <- ks.test(sample2, sample1, , alternative="g")
-  differences <- c(differences, dup$statistic)
-  p_vals <- c(p_vals, dup$p.value)
+  if (col %in% c(10,14,17,15)){
+    sample1 = true_news[,col]
+    sample2 = fake_news[,col]
+    dup <- ks.test(sample2, sample1, alternative="g")
+    differences <- c(differences, dup$statistic)
+    p_vals <- c(p_vals, dup$p.value)
+  }
+  else{
+    sample1 = true_news[,col]
+    sample2 = fake_news[,col]
+    dup <- ks.test(sample2, sample1, alternative="l")
+    differences <- c(differences, dup$statistic)
+    p_vals <- c(p_vals, dup$p.value)
+  }
+
 }
 
 names <- c('user_followers_count', 'user_friends_count', 'num_urls', 'user_favourites_count', 'num_mentions', 'num_media', 'retweet_count', 'num_hashtags')
 KolmogorovSmirnov_statistic2 <- data.frame(names, differences, p_vals)
 KolmogorovSmirnov_statistic2
+```
+## Process of Table 1 Replication
+For the process of recreating table 1 of this paper, 
+we separated the data into two separate matrices where matrix 1 had 
+all of the tweets that were labeled false and the other matrix 
+had all the tweets that were labeled true. Next, we identified the columns
+that matched the individual rows in the original feature column
+and then ran the ks.test function provided by R.
+Samples were drawn from the same column but different matrices,
+(i.e. num_retweets from False and num_retweets from True) We assumed 
+that the same two sided greater than hyptohesis was ran for their test 
+but realized that they used a combination of both less than and greater
+than for the alternative for their two sided hypothesis test.
+The thing that we chose to vary in this reproduction was the actual 
+Kolmogorov Smirnov Test, in the paper the authors said they ran the 
+actual test which we interpreted as them coding the test and running it
+(they never specify) but we just called an R function. We also assumed 
+that this didn't matter since its the same test and found that we got the 
+same values for differneces but different values for the p-value which makes us
+question their numbers. In the end if they used a signifcance level of
+0.05 (which they didn't specify) then all of the conclusions from the 
+p-value are the same except for number of mentions and user favorite count.
+
