@@ -4,9 +4,9 @@ output: pdf_document
 ---
 
 
-```{r, echo=F}
+```{r, echo=F, message=F}
 result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 
-ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + labs(y="Density", fill="Is_Fake_news") + ggtitle("Distribution of Number of URLs Per Tweet")
+ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) + scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) + labs(y="Density") + theme(legend.title=element_blank()) + ggtitle("Distribution of Number of URLs Per Tweet")
 ```
 
