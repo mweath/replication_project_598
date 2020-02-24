@@ -6,8 +6,6 @@ output: pdf_document
 ---
 
 ```{r }
-library(tidyverse)
-data = read.csv("../Data/electionday_tweets.csv")
 true_news = data[data$is_fake_news == FALSE,]
 fake_news = data[data$is_fake_news == TRUE,]
 
