@@ -10,3 +10,27 @@ result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) + scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) + labs(y="Density") + theme(legend.title=element_blank()) + ggtitle("Distribution of Number of URLs Per Tweet")
 ```
 
+## Process of Replicating Figure 12
+
+In the original paper, Figure 12 captures the distribution of the portion of tweets with different 
+amounts of URLs embedded within. A histogram was used to represent the distributions for tweets 
+classified as 'fake news,' and not, side-by-side. 
+
+Replicating this figure proved to be complicated. Note that the replicated figure features the 
+exact same distribution bars/curve as in the original figure. That is, the relationships between
+the portions (for any given number of URLs) match the relationships in the original chart.
+
+There are, however, certain differences. Notably, the x-axis is scaled differently (despite the 
+bars painting an identical picture). This is likely because the original creators factored the 
+num_urls variable into a discrete one. Here, programming errors mandated that num_urls be
+treated as a continuous one (hence the extraneous x-axis ticks). 
+
+Additionally, the scale on the y-axis is slightly shifted (upwards) in the replicated figure, 
+which initially suggests that mis-replication. Instead, the original authors must have used some
+unique function to yield the "normalized percent of tweets" that was not available here. Note 
+that all normalization functions in geom_histogram() have the same intent: to produce a density 
+plot where the sum area under the bars of one distribution is 1. For instance, the red (fake-news) 
+bars in the original figure indeed sum to 1. While that exact density-calculating function was
+not used, this property is preserved in the new figure. Also, the pattern made by the bars in 
+the original figure is also preserved, and so are the conclusions that can be drawn from it. So,
+while the process of replication differed, the results are nigh-identical and statistically sound. 
