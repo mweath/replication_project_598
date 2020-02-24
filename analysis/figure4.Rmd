@@ -5,12 +5,8 @@ date: "2/23/2020"
 output: pdf_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
-
-```{r, echo=T}
+```{r, echo=F}
 df <- data %>% select(is_fake_news, num_hashtags) 
 
 ggplot(df, aes(num_hashtags)) +

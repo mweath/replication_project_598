@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r, load-&-libraries, echo=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F)
 #library(tidyverse)
 
 #tweets_data <- read.csv("../Data/electionday_tweets_clean.csv")

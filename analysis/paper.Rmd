@@ -16,7 +16,7 @@ link-citations: yes
 
 ```{r, libraries, echo=FALSE, message=FALSE, warning=FALSE}
 knitr::opts_chunk$set(warning = FALSE)
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F)
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
@@ -29,16 +29,20 @@ figure_generator <- function(file_name){
 }
 ```
 
+# Table 1
+
 ## Original Table 1
 ```{r}
 figure_generator("Table1.PNG")
 ```
 
 
-## Table 1
+## Replication of Table 1
 
 ```{r child-table1, child='Table 1.Rmd'}
 ```
+
+# Figure 4
 
 ## Original Figure 4
 
@@ -46,10 +50,12 @@ figure_generator("Table1.PNG")
 figure_generator("Figure4.PNG")
 ```
 
-## Figure 4
+## Replication of Figure 4
 
 ```{r child-figure4, child='figure4.Rmd'}
 ```
+
+# Figure 6
 
 # Original Figure 6 
 
@@ -57,36 +63,42 @@ figure_generator("Figure4.PNG")
 figure_generator("Figure6.PNG")
 ```
 
-## Figure 6
+## Replication of Figure 6
 
 ```{r child-figure6, child='Figure6.rmd'}
 ```
+
+# Figure 7
 
 ## Original Figure 7
 ```{r}
 figure_generator("Figure7.PNG")
 ```
 
-## Figure 7
+## Replication of Figure 7
 
 ```{r child-figure7, child='Figure7.Rmd'}
 ```
+
+# Figure 9
 
 ## Original Figure 9
 ```{r}
 figure_generator("Figure9.PNG")
 ```
 
-## Figure 9
+## Replication of Figure 9
 ```{r child-figure9, child='Figure9.rmd'}
 ```
+
+# Figure 12
 
 ## Original Figure 12
 ```{r}
 figure_generator("Figure12.PNG")
 ```
 
-## Figure 12
+## Replication of Figure 12
 
 ```{r child-figure12, child='Figure 12.Rmd'}
 ``` 

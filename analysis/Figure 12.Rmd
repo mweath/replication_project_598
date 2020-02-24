@@ -4,7 +4,7 @@ output: pdf_document
 ---
 
 
-```{r, echo=T}
+```{r, echo=F}
 # label-style not exactly matching 
 result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 
