@@ -17,6 +17,9 @@ link-citations: yes
 ```{r, libraries, echo=FALSE, message=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
+library(ggplot2)
+library(dplyr)
+data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```
 
 ```{r child-table1, child='Table 1.R'}
