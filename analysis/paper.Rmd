@@ -33,6 +33,12 @@ data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```
 
 
+```{r child-figure12, child='Figure 12.Rmd'}
+``` 
+
+
+
+
 
 # References cited
 
