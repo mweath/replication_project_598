@@ -25,7 +25,7 @@ data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 
 ```{r}
 figure_generator <- function(file_name){
-  knitr::include_graphics(paste("../Data/", file_name, sep="")))
+  knitr::include_graphics(paste("../Data/", file_name, sep=""))
 }
 ```
 
