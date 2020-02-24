@@ -5,24 +5,24 @@ output: html_document
 ---
 
 ```{r}
-tweets <- read_excel("../Data/electionday_tweets_clean.xlsx")
+#tweets <- read_excel("../Data/electionday_tweets_clean.xlsx")
 ```
 
 ```{r}
-tweets$is_fake_news <- factor(tweets$is_fake_news, levels = c("TRUE", "FALSE"))
-ggplot(tweets) +
+data$is_fake_news <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
+ggplot(data) +
   ggtitle("Distribution of Friends") +
   geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
 ```
 ```{r}
-ggplot(tweets) +
+ggplot(data) +
   ggtitle("Distribution of Followers") +
   geom_density(aes(x=log(user_followers_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
 ```
 ```{r}
-ggplot(tweets) +
+ggplot(data) +
   ggtitle("Distribution of Friends to Followers Ratio") +
   geom_density(aes(x=(log(user_friends_count)/log(user_followers_count)), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
