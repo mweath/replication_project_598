@@ -6,17 +6,16 @@ output: html_document
 ---
 
 ```{r, load-&-libraries, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
-library(httr)
 
 tweets_data <- read.csv("../Data/electionday_tweets_clean.csv")
-
 tweets <- tweets_data[,]
-
 tweets$FakeNewsLabel <- ifelse(tweets$is_fake_news == TRUE, 'fake news', 'other')
 
 ```
 
+## Figure 7
 ```{r, figure7, fig.cap = 'Figure 7: Density distributions of the number of followers that the accounts generating viral tweets (within our sample) have. Accounts producing fake news have a narrower window of followers', warning=FALSE}
 
 ggplot(data = tweets, aes(user_followers_count, fill = FakeNewsLabel ,

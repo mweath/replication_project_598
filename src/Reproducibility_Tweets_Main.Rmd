@@ -1,0 +1,36 @@
+---
+title: Repeoducibility of "Characterizing Political Fake News in Twitter"
+author: Andy De La Fuente, Anmol Srivastava, Juan Solorio, Maggie Weatherly, Matt Rhodes
+date: "`r format(Sys.time(),'%d %B, %Y')`"
+bibliography: ../Notes/citations.bib
+output:
+  tufte::tufte_html: default
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+  tufte::tufte_book:
+    citation_package: natbib
+    latex_engine: xelatex
+link-citations: yes
+---
+
+```{r, libraries, echo=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+```{r child-table1, child='Table 1.R'}
+```
+
+```{r child-figure4, child='figure4.Rmd'}
+```
+
+
+```{r child-figure7, child='Figure7.Rmd'}
+```
+
+
+
+# References cited
+
+[@TweetsOriginal]
