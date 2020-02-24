@@ -57,7 +57,7 @@ figure_generator("Figure4.PNG")
 
 # Figure 6
 
-# Original Figure 6 
+## Original Figure 6 
 
 ```{r}
 figure_generator("Figure6.PNG")
