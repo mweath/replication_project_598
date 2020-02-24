@@ -9,14 +9,13 @@ output: pdf_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Figure 4
 
 ```{r, echo=T}
 df <- data %>% select(is_fake_news, num_hashtags) 
 
 ggplot(df, aes(num_hashtags)) +
-  geom_histogram(aes(y=c(..count..[..group..==1]/sum(..count..[..group..==1]),
-                         ..count..[..group..==2]/sum(..count..[..group..==2]))*100,
+  geom_histogram(aes(y=c(..count..[..group..==2]/sum(..count..[..group..==2]),
+                         ..count..[..group..==1]/sum(..count..[..group..==1]))*100,
                      color = is_fake_news, fill=is_fake_news),
                  position="dodge", bins=10, alpha = 0.4) +
   ylab("Percentage") + xlab("Number of Hashtags") +

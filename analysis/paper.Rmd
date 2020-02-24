@@ -23,18 +23,27 @@ library(dplyr)
 data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```
 
+## Table 1
+
 ```{r child-table1, child='Table 1.Rmd'}
 ```
+
+## Figure 4
 
 ```{r child-figure4, child='figure4.Rmd'}
 ```
 
+## Figure 6
+
 ```{r child-figure6, child='Figures_6_7_9.rmd'}
 ```
+
+## Figure 7
 
 ```{r child-figure7, child='Figure7.Rmd'}
 ```
 
+## Figure 12
 
 ```{r child-figure12, child='Figure 12.Rmd'}
 ``` 
