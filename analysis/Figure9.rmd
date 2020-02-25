@@ -4,6 +4,24 @@ author: "Andres De La Fuente"
 output: html_document
 ---
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+data <- data[data$user_friends_count!=0,]
+data <- data[data$user_followers_count!=0,]
+data <- within(data, ratio <- (log(user_friends_count)/log(user_followers_count)))
+
+ratio.ks <- ks.test(data$ratio[data$is_fake_news==TRUE],data$ratio[data$is_fake_news==FALSE])
+
+pval.ratio.ks <- formatC(ratio.ks$p.value, format = 'e', digits = 2)
+
+ratio.t <- t.test(data$ratio[data$is_fake_news==TRUE],data$ratio[data$is_fake_news==FALSE])
+
+pval.ratio.t <- formatC(ratio.t$p.value, format = 'e', digits = 2)
+
+```
+T test P - Value: `r pval.ratio.t`
+
+KS test P - Value: `r pval.ratio.ks`
+
 ```{r}
 ggplot(data) +
   ggtitle("Distribution of Friends to Followers Ratio") +
@@ -15,3 +33,5 @@ ggplot(data) +
 ## Process of Figure 9 Replication
 
 Being a very similar figure to figure 6, figure 9 was replicated by the same process. Variations on the 'ratio' calculation for 'friends to followers' were experimented with, including a direct ratio and a log of the ratio. However, the calculation that yielded the scale most like the original figure was the ratio of the logs of each value. 
+
+Figure 9, like 6 and 7, is also used to claim a difference in distributions. For this reason, p values were generated for two different kinds of tests, and the results validate the original claim. Despite not having a level of significance for these tests from the authors, the p values are small enough that any commonly used significance level would have resulted in the same conclusion. Due to the fact that these tests were being used on the log transform of values for this figure, tweets with a value of 0 for either friends or followers had to be removed, as this would result in non numeric values which the T Test could not handle.

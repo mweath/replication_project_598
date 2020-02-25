@@ -8,15 +8,35 @@ output: html_document
 #tweets <- read_excel("../Data/electionday_tweets_clean.xlsx")
 ```
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+friends.ks <- ks.test(data$user_friends_count[data$is_fake_news==TRUE],data$user_friends_count[data$is_fake_news==FALSE])
+
+pval.friends.ks <- formatC(friends.ks$p.value, format = 'e', digits = 2)
+
+friends.t <- t.test(data$user_friends_count[data$is_fake_news==TRUE],data$user_friends_count[data$is_fake_news==FALSE])
+
+pval.friends.t <- formatC(friends.t$p.value, format = 'e', digits = 2)
+
+```
+T test P - Value: `r pval.friends.t`
+
+KS test P - Value: `r pval.friends.ks`
+
 ```{r}
 data$is_fake_news <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 ggplot(data) +
   ggtitle("Distribution of Friends") +
-  geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
+  geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4)
 
 ```
 
+
+
 ## Process of Figure 6 Replication
 
-This figure, according to the original paper, displays a density plot of the number of friends for tweets classified as fake news versus those that were not. The initial step in replicating this was to plot these distributions directly. Using ggplot, two separate distribution bar graphs were generated, one for each of the categories. Initially this seemed to be very far off from the original results, but this was because an unaltered scale was used. After representing the number of friends on a log scale, the results were similar. Seeing a rough match with what the orignial figure contained, the next step was to determine how the authors went about 'smoothing' the distribution plots. After exploring some options for kernel density estimation, the ggplot estimation produced results precisely like those the original authors did. Beyond this, some experimentation was done with ggplot styling options to achieve the same look for the finished figure, which simply required to order the categories in the data a certain way so that the distributions would render exactly how they are in the original figrue.
+This figure, according to the original paper, displays a density plot of the number of friends for tweets classified as fake news versus those that were not, and captures a statistically significant difference. The initial step in replicating this was to plot these distributions directly. Using ggplot, two separate distribution bar graphs were generated, one for each of the categories. Initially this seemed to be very far off from the original results, but this was because an unaltered scale was used. After representing the number of friends on a log scale, the results were similar. Seeing a rough match with what the orignial figure contained, the next step was to determine how the authors went about 'smoothing' the distribution plots. After exploring some options for kernel density estimation, the ggplot estimation produced results precisely like those the original authors did. 
+
+Since the accompanying claim for the original figure was a statistically significant difference between these distributions, p values were generated here for two different kinds of tests. The results confirm that for any reasonable significance level, there is a significant difference captured by this figure.
+
+Beyond this, some experimentation was done with ggplot styling options to achieve the same look for the finished figure, which required to order the categories in the reverse of the default so that the distributions would render exactly how they are in the original figure.
 
