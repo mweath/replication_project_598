@@ -20,6 +20,7 @@ knitr::opts_chunk$set(echo = F)
 library(tidyverse)
 library(ggplot2)
 library(dplyr)
+library(ggpubr)
 data <- read.csv(file = "../DATA/electionday_tweets_clean.csv")
 ```
 
@@ -29,6 +30,9 @@ figure_generator <- function(file_name){
 }
 ```
 
+# Introduction
+
+
 # Table 1
 
 ## Original Table 1
@@ -36,11 +40,11 @@ figure_generator <- function(file_name){
 figure_generator("Table1.PNG")
 ```
 
-
 ## Replication of Table 1
 
 ```{r child-table1, child='Table 1.Rmd'}
 ```
+
 
 # Figure 4
 
@@ -55,6 +59,7 @@ figure_generator("Figure4.PNG")
 ```{r child-figure4, child='figure4.Rmd'}
 ```
 
+
 # Figure 6
 
 ## Original Figure 6 
@@ -68,9 +73,11 @@ figure_generator("Figure6.PNG")
 ```{r child-figure6, child='Figure6.rmd'}
 ```
 
+
 # Figure 7
 
 ## Original Figure 7
+
 ```{r}
 figure_generator("Figure7.PNG")
 ```
@@ -80,20 +87,25 @@ figure_generator("Figure7.PNG")
 ```{r child-figure7, child='Figure7.Rmd'}
 ```
 
+
 # Figure 9
 
 ## Original Figure 9
+
 ```{r}
 figure_generator("Figure9.PNG")
 ```
 
 ## Replication of Figure 9
+
 ```{r child-figure9, child='Figure9.rmd'}
 ```
+
 
 # Figure 12
 
 ## Original Figure 12
+
 ```{r}
 figure_generator("Figure12.PNG")
 ```
