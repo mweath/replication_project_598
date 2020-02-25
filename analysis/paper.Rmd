@@ -85,6 +85,7 @@ figure_generator("Figure7.PNG")
 
 ## Replication of Figure 7
 
+
 ```{r child-figure7, child='Figure7.Rmd'}
 ```
 

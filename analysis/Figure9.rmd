@@ -10,6 +10,8 @@ ggplot(data) +
   geom_density(aes(x=(log(user_friends_count)/log(user_followers_count)), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
 
 ```
+
+
 ## Process of Figure 9 Replication
 
 Being a very similar figure to figure 6, figure 9 was replicated by the same process. Variations on the 'ratio' calculation for 'friends to followers' were experimented with, including a direct ratio and a log of the ratio. However, the calculation that yielded the scale most like the original figure was the ratio of the logs of each value. 

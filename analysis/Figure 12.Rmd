@@ -10,7 +10,7 @@ result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) + scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) + labs(y="Density") + theme(legend.title=element_blank()) + ggtitle("Distribution of Number of URLs Per Tweet")
 ```
 
-## Process of Replicating Figure 12
+## Process of Figure 12 Replication
 
 In the original paper, Figure 12 captures the distribution of the portion of tweets with different 
 amounts of URLs embedded within. A histogram was used to represent the distributions for tweets 
