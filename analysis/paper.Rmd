@@ -121,5 +121,3 @@ figure_generator("Figure12.PNG")
 
 
 # References cited
-
-[@TweetsOriginal]
