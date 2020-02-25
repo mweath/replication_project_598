@@ -1,0 +1,11 @@
+---
+title: "Figure 7"
+output: html_document
+---
+
+The research our team attempted to reproduce was “Characterizing Political Fake News in Twitter By Its Meta-Data” by Julio Amador Dıaz Lopez, Axel Oehmichen, and Miguel Molina-Solana. The paper’s fundamental claim is that there are differences around the exposure and characteristics of fake Twitter accounts versus other accounts, as well as the tone of the content. Their research and curated data is available at https://github.com/alumag/ADAFake.
+
+The original research group pulled Twitter data, over 1.5M tweets were collected related to the
+the day of the election of Donald Trump as 45th president of the United States of America. The research group, focused on tweets that went viral (those with large number of re-tweets), manually curated these to differentiate between “Fake New” and “Other” for each tweet. Our team focused on reproducing Figures 4, 6, 7, 9, and 12 as well as Table 1 in order to test the original hypotheses of observable significant difference in meta-data between those accounts characterized as “Fake News” and those characterize as “Other”. Primarily, we are focused on testing the claims of difference among the distribution of number of hashtags (*num_hashtags*), distribution of URLs (*num_urls*), and the distributions of user friends and followers (*user_friends_count*,*user_followers_count*).
+
+Our project and code can be found in the git repository at https://github.com/mweath/replication_project_598.

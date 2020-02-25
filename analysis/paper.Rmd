@@ -31,7 +31,8 @@ figure_generator <- function(file_name){
 ```
 
 # Introduction
-
+```{r child-introduction, child='Introduction.Rmd'}
+```
 
 # Table 1
 
