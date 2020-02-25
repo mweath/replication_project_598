@@ -16,3 +16,7 @@ ggplot(data) +
 
 ```
 
+## Process of Figure 6 Replication
+
+This figure, according to the original paper, displays a density plot of the number of friends for tweets classified as fake news versus those that were not. The initial step in replicating this was to plot these distributions directly. Using ggplot, two separate distribution bar graphs were generated, one for each of the categories. Initially this seemed to be very far off from the original results, but this was because an unaltered scale was used. After representing the number of friends on a log scale, the results were similar. Seeing a rough match with what the orignial figure contained, the next step was to determine how the authors went about 'smoothing' the distribution plots. After exploring some options for kernel density estimation, the ggplot estimation produced results precisely like those the original authors did. Beyond this, some experimentation was done with ggplot styling options to achieve the same look for the finished figure, which simply required to order the categories in the data a certain way so that the distributions would render exactly how they are in the original figrue.
+
