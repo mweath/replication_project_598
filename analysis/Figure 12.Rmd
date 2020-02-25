@@ -3,11 +3,25 @@ title: "Figure 12"
 output: pdf_document
 ---
 
+```{r, echo=F, message=F}
+
+u.t.subset <- data$num_urls[data$is_fake_news==T]
+u.f.subset <- data$num_urls[data$is_fake_news==F]
+
+ks <- ks.test(u.t.subset, u.f.subset)
+ks.p <- formatC(ks$p.value, format='e', digits=2)
+
+t <- t.test(u.t.subset, u.f.subset)
+t.p <- formatC(t$p.value, format='e', digits=2)
+
+caption.t <- paste('T-test p-value:', t.p)
+caption.ks <- paste('KS-test p-value:', ks.p)
+```
 
 ```{r, echo=F, message=F}
 result <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 
-ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) + scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) + labs(y="Density") + theme(legend.title=element_blank()) + ggtitle("Distribution of Number of URLs Per Tweet")
+ggplot(data, aes(x=num_urls, group=result, fill=result)) + geom_histogram(aes(y=..density..), position="dodge") + scale_y_continuous(labels=function(x) paste0(x/10)) + scale_color_manual(values = c("#df6066", "#80bab4"), labels = c("Fake News","Other")) + scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) + labs(y="Density", caption=paste(caption.t, caption.ks)) + theme(legend.title=element_blank(), plot.caption=element_text(hjust=0.5)) + ggtitle("Distribution of Number of URLs Per Tweet")
 ```
 
 ## Process of Figure 12 Replication
@@ -34,3 +48,5 @@ bars in the original figure indeed sum to 1. While that exact density-calculatin
 not used, this property is preserved in the new figure. Also, the pattern made by the bars in 
 the original figure is also preserved, and so are the conclusions that can be drawn from it. So,
 while the process of replication differed, the results are nigh-identical and statistically sound. 
+
+Note that differences are statistically significant at alpha = 0.05, as expected. 
