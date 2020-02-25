@@ -18,15 +18,14 @@ friends.t <- t.test(data$user_friends_count[data$is_fake_news==TRUE],data$user_f
 pval.friends.t <- formatC(friends.t$p.value, format = 'e', digits = 2)
 
 ```
-T test P - Value: `r pval.friends.t`
 
-KS test P - Value: `r pval.friends.ks`
 
 ```{r}
 data$is_fake_news <- factor(data$is_fake_news, levels = c("TRUE", "FALSE"))
 ggplot(data) +
   ggtitle("Distribution of Friends") +
-  geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4)
+  geom_density(aes(x=log(user_friends_count), fill=is_fake_news, color=is_fake_news), alpha=0.4) + 
+  annotate("text", x = 2.5:2.5, y = c(.155,.18), label = c(paste(' T-test p-value:',pval.friends.t),paste(' KS test p-value:',pval.friends.ks)),size=3)
 
 ```
 

@@ -18,14 +18,13 @@ ratio.t <- t.test(data$ratio[data$is_fake_news==TRUE],data$ratio[data$is_fake_ne
 pval.ratio.t <- formatC(ratio.t$p.value, format = 'e', digits = 2)
 
 ```
-T test P - Value: `r pval.ratio.t`
 
-KS test P - Value: `r pval.ratio.ks`
 
 ```{r}
 ggplot(data) +
   ggtitle("Distribution of Friends to Followers Ratio") +
-  geom_density(aes(x=(log(user_friends_count)/log(user_followers_count)), fill=is_fake_news, color=is_fake_news), alpha=0.4) 
+  geom_density(aes(x=(log(user_friends_count)/log(user_followers_count)), fill=is_fake_news, color=is_fake_news), alpha=0.4)  + 
+  annotate("text", x = 1.4:1.4, y = c(1.2,1.4), label = c(paste(' T-test p-value:',pval.ratio.t),paste(' KS test p-value:',pval.ratio.ks)),size=3)
 
 ```
 

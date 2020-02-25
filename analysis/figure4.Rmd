@@ -11,13 +11,13 @@ df <- data %>% select(is_fake_news, num_hashtags)
 
 
 ```{r, calc-pval-hash, echo=FALSE, message=FALSE, warning=FALSE}
-followes.ks <- ks.test(df$num_hashtags[df$is_fake_news==T],df$num_hashtags[df$is_fake_news==F])
+hash.ks <- ks.test(df$num_hashtags[df$is_fake_news==T],df$num_hashtags[df$is_fake_news==F])
 
-pval.followes.ks <- formatC(followes.ks$p.value, format = 'e', digits = 2)
+pval.hash.ks <- formatC(hash.ks$p.value, format = 'e', digits = 2)
 
-followes.t <- t.test(df$num_hashtags[df$is_fake_news==T],df$num_hashtags[df$is_fake_news==F])
+hash.t <- t.test(df$num_hashtags[df$is_fake_news==T],df$num_hashtags[df$is_fake_news==F])
 
-pval.followes.t <- formatC(followes.t$p.value, format = 'e', digits = 2)
+pval.hash.t <- formatC(hash.t$p.value, format = 'e', digits = 2)
 
 ```
 
@@ -35,7 +35,7 @@ ggplot(df, aes(num_hashtags)) +
   scale_fill_manual(values = c( "#df6066", "#80bab4"), labels = c("Fake News","Other")) +
   scale_x_continuous(breaks = seq(0,10,1), labels = seq(0,10,1)) +
   theme(panel.grid.minor = element_blank()) + 
-  annotate("text", x = 5:5, y = c(35,45), label = c(paste(' T-test p-value:',pval.followes.t),paste(' KS test p-value:',pval.followes.ks)),size=3)
+  annotate("text", x = 5:5, y = c(35,45), label = c(paste(' T-test p-value:',pval.hash.t),paste(' KS test p-value:',pval.hash.ks)),size=3)
 ```
 
 
